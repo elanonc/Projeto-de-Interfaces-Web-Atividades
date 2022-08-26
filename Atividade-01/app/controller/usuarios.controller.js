@@ -16,24 +16,6 @@ let usuarios = [
         nome: "odimar",
         email: "parceirOdimar@ufc.com",
         senha: "karen123"
-    },
-    {
-        id: 4,
-        nome:"Mariana",
-        email: "mari@atlantico.com",
-        senha: "pordeus"
-    },
-    {
-        id: 5,
-        nome: "João",
-        email: "joaovilt@vilt.com",
-        senha: "£$£$"
-    },
-    {
-        id: 6,
-        nome: "odimar",
-        email: "parceirOdimar@ufc.com",
-        senha: "karen123"
     }
 ];
 
@@ -58,7 +40,7 @@ module.exports.cadastrarUsuario = function(req, res){
 module.exports.removerUsuario = function(req, res){
     let { id } = req.params;
     
-    let aux = usuarios.filter(x => x.id != id);
+    let aux = usuarios.filter(item => item.id != id);
 
     usuarios = aux;
     
