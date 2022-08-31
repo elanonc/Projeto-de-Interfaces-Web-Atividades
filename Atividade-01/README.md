@@ -1,11 +1,12 @@
  ## Atividade 01 - Projeto de Interfaces Web
 
-![image](https://drive.google.com/uc?export=view&id=1teVisTw7PJfRbbrSdoL6bIhjRDMJvQOT)
+[Elano N. Caitano](https://github.com/elanonc) 473434
 
 ## Techs
 O projeto foi feito utilizando as seguintes tecnologias:
 
 * [Node.Js](https://nodejs.org/en/)
+* [Insomnia](https://insomnia.rest/)
 
 ## Features
 
