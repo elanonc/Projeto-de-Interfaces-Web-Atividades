@@ -19,7 +19,7 @@ let usuarios = [
     }
 ];
 
-module.exports.obterUsuarios = function(req, res){
+module.exports.listarUsuarios = function(req, res){
     res.json(usuarios);
 };
 
@@ -28,12 +28,24 @@ module.exports.obterUsuario = function(req, res){
 
     let usuario = usuarios.find(usuario => (usuario.id == id));
 
-    usuario ? res.json(usuario) : res.status(404).json({ error: "Usuario não encontrado"});
+    if(usuario){
+        return res.json(usuario);
+    } else {
+        return res.status(404).json( { error: "Usuário não encontrado!!!!"} );
+    }
 };
 
 module.exports.cadastrarUsuario = function(req, res){
-    usuarios.push(req.body);
+    const { id } = req.body; // apenas para validação
 
+    let usuarioJaExiste = usuarios.some((item) => item.id == id);
+    
+    if (usuarioJaExiste) {
+        return res.status(400).json({ error: "Id do usuário já existe!!"});
+    }
+    
+    usuarios.push(req.body);
+    
     res.status(200).send(req.body);
 };
 
@@ -42,7 +54,15 @@ module.exports.removerUsuario = function(req, res){
     
     let aux = usuarios.filter(item => item.id != id);
 
+    let usuario = usuarios.find(usuario => (usuario.id == id));
+    
+    if(usuario){
+        res.json(usuario);
+    } else {
+        res.status(404).json( { error: "Usuário não encontrado!!!!"} );
+    }
+
     usuarios = aux;
     
-    return res.send(usuarios);
+    return res.status(200).send(usuario);
 };

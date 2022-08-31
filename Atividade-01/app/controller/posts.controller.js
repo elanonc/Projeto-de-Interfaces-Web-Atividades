@@ -25,11 +25,24 @@ module.exports.obterPost = (req, res) => {
 
     let post = posts.find((item) => item.id == id);
     
-    post ? res.json(post) : res.status(404).json( { error: "usuário não encontrado"} );
+    if(post){
+        return res.json(post)
+    } else {
+        return res.status(404).json( { error: "Post não encontrado"} );
+    }
 }
 
 module.exports.fazerPosts = (req, res) => {
+    let { id } = req.body; 
+
+    let postJaExiste = posts.some((item) => item.id == id);
+
+    if(postJaExiste) {
+        return res.status(400).json( { error: "Id do post já existe"} );
+    }
+
     posts.push(req.body);
+
     res.status(200).send(req.body);
 }
 
@@ -38,7 +51,15 @@ module.exports.removerPosts = (req, res) => {
 
     let aux = posts.filter((item) => item.id != id);
 
+    let post = posts.find((item) => item.id == id);
+
+    if(post){
+        res.json(post)
+    } else {
+        res.status(404).json( { error: "Post não encontrado"} );
+    }
+
     posts = aux;
 
-    res.status(200).send(aux);
+    return res.status(200).send(post);
 }

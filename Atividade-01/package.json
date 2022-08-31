@@ -5,11 +5,13 @@
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
+    "dev": "nodemon main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Elano - 474343",
   "license": "ISC",
   "dependencies": {
-    "express": "4.16"
+    "express": "4.16",
+    "nodemon": "^2.0.19"
   }
 }
