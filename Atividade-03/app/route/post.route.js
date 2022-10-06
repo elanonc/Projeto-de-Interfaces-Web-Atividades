@@ -6,7 +6,7 @@ const auth = require("../controller/auth.controller.js");
 module.exports = function(app){
     app.post("/post", controller.inserirPost);
 
-    // app.use("/post", auth.checar);
+    app.use("/post", auth.checar);
 
     app.get("/post", controller.listarPosts);
     app.get("/post/:id/comentarios", controllerComentarios.obterComentariosDoPost);
