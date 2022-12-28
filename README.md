@@ -12,12 +12,12 @@
 
 | Atividade | Descrição                                   |
 | :---------- | :------------------------------------------ |
-| Atividade 01 - Node.js e Express.js | Construção de Endpoints conforme determinados na atividade, respeitando as estruturas JSON de exemplo. Os dados são armazenados em lista. |
-| Atividade 02 - Node.js, Express.js e Mongoose | Criação de models, criação de views, construção de Endpoints como na atividade 01, mas agora os dados são armazenados no MongoDB.  |
-| Atividade 03 - Node.js, Express.js, Mongoose, BCrypt e JWT | Todos os Endpoints agora recebem e validam o token JWT menos os POST's em usuario.   |
-| Atividade 04- React.js - Componentes | Página conforme esboço. |
-| Atividade 05 - React.js - Roteamento | Página conforme esboço, agora com as rotas definidas. |
-| Atividade 06 - React.js – Componentes, Roteamento, Hooks e Axios | Continuação da atividade anterior, nessa atividade devem ser feitas requisições utilizando axios, o login deve fazer a autenticação usando backend das atividades anteriores e as funcionalidades devem ser possíveis ser realizadas de acordo com a validação do token no login. |
+| 01: Node.js e Express.js | Construção de Endpoints conforme determinados na atividade, respeitando as estruturas JSON de exemplo. Os dados são armazenados em lista. |
+| 02: Node.js, Express.js e Mongoose | Criação de models, criação de views, construção de Endpoints como na atividade 01, mas agora os dados são armazenados no MongoDB.  |
+| 03: Node.js, Express.js, Mongoose, BCrypt e JWT | Todos os Endpoints agora recebem e validam o token JWT menos os POST's em usuario.   |
+| 04: React.js - Componentes | Página conforme esboço. |
+| 05: React.js - Roteamento | Página conforme esboço, agora com as rotas definidas. |
+| 06:  React.js - Componentes, Roteamento, Hooks e Axios | Continuação da atividade anterior, nessa atividade devem ser feitas requisições utilizando axios, o login deve fazer a autenticação usando backend das atividades anteriores e as funcionalidades devem ser possíveis ser realizadas de acordo com a validação do token no login. |
 
 
 ## 🚀 Tecnologias
